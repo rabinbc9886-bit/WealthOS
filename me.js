@@ -124,3 +124,13 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Logout प्रोसेस
+const logoutBtn = document.getElementById('logoutBtn');
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('wealthOS_currentUser');
+        alert("हजुर सफलतापूर्वक लगआउट हुनुभयो।");
+        window.location.href = "index.html";
+    });
+}
