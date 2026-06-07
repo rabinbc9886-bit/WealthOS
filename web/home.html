@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WealthOS - Your Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="me.css">
+    <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">WealthOS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#notice">Notice</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="document.html">Documents</a></li>
+                <li><a href="#finance">Personal Finance</a></li>
+            </ul>
+            <div class="navbar-profile">
+                <div id="navbarAvatar" class="navbar-avatar-box">
+                    <span id="navbarAvatarInitial"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="homeSection" class="hero">
+        <div class="hero-content">
+            <h1>Your Financial Operating System</h1>
+            <p>Track your income, monitor expenses, and automate your savings with the ultimate clean financial operating system.</p>
+        </div>
+        <div class="hero-image">
+            <div id="dashboardAvatar" class="dashboard-mockup" style="width: 100%; max-width: 500px; height: 350px; overflow: hidden; background-size: cover; background-repeat: no-repeat; background-position: center; display: flex; justify-content: center; align-items: center; border-radius: 12px; border: 1px solid #f1f0ea; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <span id="dashboardText" class="mockup-text">your profile here</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="meSection" class="me-section" style="display: none;">
+        
+        <div class="profile-heading-box">
+            <h2 class="profile-title">My Profile</h2>
+            <p class="profile-subtitle">Your personal details recorded in WealthOS.</p>
+        </div>
+
+        <div class="me-profile-grid">
+            
+            <div class="avatar-left-container">
+                <div id="meAvatar" class="profile-avatar-box">
+                    <span id="avatarInitial"></span>
+                </div>
+                
+                <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                <button type="button" class="change-photo-link-btn" onclick="document.getElementById('avatarUpload').click()">Change Photo</button>
+
+                <span class="active-member-badge">Active Member</span>
+                
+                <button id="logoutBtn" class="login-btn" style="border-color: #dc3545; color: #dc3545; width: 100%; margin-top: 20px;">Logout</button>
+            </div>
+
+            <div class="profile-info-card">
+                <div>
+                    <label class="profile-label">First Name</label>
+                    <div id="meFirstName" class="profile-data-text">-</div>
+                </div>
+                <div>
+                    <label class="profile-label">Last Name</label>
+                    <div id="meLastName" class="profile-data-text">-</div>
+                </div>
+                
+                <div class="profile-form-separator"></div>
+                
+                <div>
+                    <label class="profile-label">Email Address</label>
+                    <div id="meEmail" class="profile-data-text">-</div>
+                </div>
+                <div>
+                    <label class="profile-label">Date of Birth</label>
+                    <div id="meDOB" class="profile-data-text">-</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="financeSection" class="fin-section" style="display: none;">
+        
+        <div class="fin-heading-box">
+            <h2 class="fin-title">Personal Finance</h2>
+            <p class="fin-subtitle">Track your net worth, manage your asset allocations, and monitor profits or losses.</p>
+        </div>
+
+        <div class="fin-networth-card">
+            <span class="fin-networth-label">TOTAL NET WORTH (2026)</span>
+            <h1 id="finTotalNetWorth">Rs. 0.00</h1>
+        </div>
+
+        <div class="fin-container-grid">
+            <div class="fin-table-card summary-table-card" style="margin-top: 0px;">
+                <div class="fin-table-responsive">
+                    <table class="fin-tracker-table summary-table">
+                        <thead>
+                            <tr>
+                                <th>Total Investment Amount</th>
+                                <th>Total Current Value</th>
+                                <th>Total P/L</th>
+                                <th>Total Liabilities</th>
+                                <th>Net Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="summaryTotalInvestment">Rs. 0.00</td>
+                                <td id="summaryTotalCurrent">Rs. 0.00</td>
+                                <td id="summaryTotalPL">Rs. 0.00</td>
+                                <td id="summaryTotalLiabilities">Rs. 0.00</td>
+                                <td id="summaryNetProfit">Rs. 0.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="fin-table-card">
+                <div class="fin-table-header-row">
+                    <h3>Net Worth Tracker 2026</h3>
+                </div>
+                <div class="fin-table-responsive">
+                    <table class="fin-tracker-table">
+                        <thead>
+                            <tr>
+                                <th>Asset Allocation</th>
+                                <th>Investment Amount</th>
+                                <th>Current Value</th>
+                                <th>Profit & Loss Account</th>
+                                <th style="width: 50px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="financeTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="summary-toggle-button">
+                <button onclick="toggleManageSection()" class="fin-primary-btn" style="background: #6c757d; cursor: pointer;">
+                    ⚙️ Manage Asset Categories (Toggle)
+                </button>
+            </div>
+    
+            <div class="fin-control-card" id="manageAssetSection" style="display: none; margin-top: 10px;">
+                <h3>Manage Asset Categories</h3>
+                <div class="fin-form-group">
+                    <label for="assetCategorySelect">Select or Create Category</label>
+                    <select id="assetCategorySelect">
+                        <option value="Cash & Liquidity">Cash & Liquidity</option>
+                        <option value="Total Shares Value">Total Shares Value</option>
+                        <option value="Gold/Silver">Gold/Silver</option>
+                        <option value="Land">Land</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Liabilities">Liabilities (ऋण/दायित्व)</option>
+                        <option value="Other">Other (Specify...)</option>
+                    </select>
+                    <div class="fin-form-group" id="customCategoryGroup" style="display: none; margin-top: 10px;">
+                        <label for="customCategoryInput">Specify Asset Name</label>
+                        <input type="text" id="customCategoryInput" placeholder="e.g., Bike, Livestock, Crypto">
+                    </div>
+                </div>
+                <div class="fin-form-group" id="assetInvestGroup">
+                    <label id="labelInvestAmt" for="assetInvestInput">Investment Amount (Rs.)</label>
+                    <input type="number" id="assetInvestInput" placeholder="Enter investment amount">
+                </div>
+                <div class="fin-form-group">
+                    <label id="labelCurrentVal" for="assetCurrentInput">Current Value (Rs.)</label>
+                    <input type="number" id="assetCurrentInput" placeholder="Enter current market value">
+                </div>
+                <button type="button" id="saveAssetBtn" class="fin-primary-btn">Update / Add Asset</button>
+            </div>
+        </div>
+    </section>  
+
+    <section id="assetDetailSection" class="fin-section" style="display: none;">
+    <button onclick="backToFinance()" class="fin-primary-btn" style="width: auto; padding: 5px 15px;">← Back</button>
+    <h2 id="detailTitle" style="text-align: center; color: #0f5132;">Details</h2>
+
+    <div class="fin-table-card">
+        <table class="fin-tracker-table">
+            <thead id="detailTableHeader">
+                </thead>
+            <tbody id="detailTableBody"></tbody>
+        </table>
+
+        <div id="cashInputBox" style="padding: 15px; display: none; gap: 10px;">
+            <input type="text" id="bankNameInput" placeholder="Bank Name">
+            <input type="number" id="investInput" placeholder="Invested Amt">
+            <input type="number" id="interestInput" placeholder="Current Value">
+            <button onclick="addBankDetail()" class="fin-primary-btn" style="width: auto;">Add</button>
+        </div>
+
+        <div id="shareInputBox" style="padding: 15px; display: none; flex-wrap: wrap; gap: 10px;">
+            <input type="text" id="shareDate" placeholder="Date">
+            <input type="text" id="shareStock" placeholder="Stock Symbol">
+            <input type="text" id="shareSector" placeholder="Sector">
+            <input type="number" id="shareUnits" placeholder="Units">
+            <input type="number" id="shareBuyPrice" placeholder="Buy Price">
+            <input type="number" id="shareCurrPrice" placeholder="Current Price">
+            <button onclick="addShareDetail()" class="fin-primary-btn" style="width: auto;">Add Share</button>
+        </div>
+
+
+        <div id="goldInputBox" style="padding: 15px; display: none; flex-wrap: wrap; gap: 10px; background: #fff3cd; border-radius: 8px;">
+            <input type="text" id="goldDate" placeholder="Date (B.S)">
+            <input type="text" id="goldType" placeholder="Gold Type">
+            <input type="number" id="goldWeight" placeholder="Weight (Gram)">
+            <input type="number" id="goldInvest" placeholder="Invested Amount">
+            <input type="number" id="goldRate" placeholder="Current Rate (per tola)">
+            <button onclick="addGoldDetail()" class="fin-primary-btn" style="width: auto;">Add Gold</button>
+        </div>
+        
+        <div id="landInputBox" style="padding: 15px; display: none; flex-wrap: wrap; gap: 10px; background: #e2e3e5; border-radius: 8px;">
+            <input type="text" id="landPlotNo" placeholder="Plot No.">
+            <input type="text" id="landLocation" placeholder="Location Name">
+            <input type="number" id="landInvest" placeholder="Investment Amount">
+            <input type="number" id="landCurrVal" placeholder="Current Value">
+            <button onclick="addLandDetail()" class="fin-primary-btn" style="width: auto;">Add Land</button>
+        </div>
+
+        <div id="liabilityInputBox" style="padding: 15px; display: none; flex-wrap: wrap; gap: 10px; background: #eef2ff; border-radius: 8px;">
+            <input type="text" id="loanNameInput" placeholder="Loan Name">
+            <input type="text" id="loanTypeInput" placeholder="Loan Type (Personal, Home, Vehicle, Education)">
+            <input type="number" id="loanAmountInput" placeholder="Total Loan Amount">
+            <input type="number" id="loanBalanceInput" placeholder="Remaining Balance">
+            <input type="number" id="loanInterestInput" placeholder="Interest Rate (%)">
+            <input type="number" id="loanEmiInput" placeholder="Monthly EMI">
+            <input type="date" id="loanStartDateInput" placeholder="Start Date">
+            <input type="date" id="loanEndDateInput" placeholder="End Date">
+            <button onclick="addLiabilityDetail()" class="fin-primary-btn" style="width: auto;">Add Loan</button>
+        </div>
+
+    </div>
+</section>
+
+    <footer class="footer">
+        <p>&copy; 2024 WealthOS. All rights reserved.</p>
+        <p>Contact: <a href="mailto:info@wealthos.com">info@wealthos.com</a></p>
+    </footer>
+
+    <script src="finance.js"></script>
+    <script src="home.js"></script>
+    <script src="me.js"></script>
+</body>
+</html>

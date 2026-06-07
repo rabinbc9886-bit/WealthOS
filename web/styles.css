@@ -1,0 +1,485 @@
+/* ============================================
+   RESET & BASIC STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    overflow-x: hidden;
+    width: 100%;
+    /* Soft Warm White Background */
+    background-color: #fdfcfb; 
+}
+
+/* ============================================
+   NAVBAR STYLING
+   ============================================ */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #f3f1eb;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f5132; /* Primary Deep Green */
+    white-space: nowrap;
+}
+
+/* NAV LINKS - HORIZONTAL SCROLL */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex: 1;
+    margin-left: 50px;
+    
+    /* SCROLL SETTINGS */
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    padding-right: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom Mini Scrollbar for Green Theme */
+.nav-links::-webkit-scrollbar {
+    height: 4px;
+}
+
+.nav-links::-webkit-scrollbar-track {
+    background: #f1f0ea;
+    border-radius: 10px;
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+    background: #198754;
+    border-radius: 10px;
+}
+
+.nav-links li {
+    list-style: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #198754; /* Green Hover */
+}
+
+/* AUTH BUTTONS */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #198754;
+    border: 2px solid #198754;
+}
+
+.login-btn:hover {
+    background-color: #198754;
+    color: white;
+}
+
+/* NAVBAR PROFILE AVATAR */
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-avatar-box {
+    width: 40px;
+    height: 40px;
+    background-color: #198754;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.navbar-avatar-box:hover {
+    transform: scale(1.1);
+}
+}
+
+.signup-btn {
+    background-color: #198754;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #0f5132;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.2);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #0f5132; /* Deep Brand Green */
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #10b981; /* Vibrant Accent Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #059669;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Dashboard Mockup Placeholder Box */
+.dashboard-mockup {
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(135deg, #f4f2eb 0%, #e5e2d8 100%);
+    border: 1px solid #dcd9cf;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mockup-text {
+    color: #7c8893;
+    font-weight: 500;
+}
+
+/* ============================================
+   FOOTER STYLING
+   ============================================ */
+.footer {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #f1f0ea;
+    margin-top: 80px;
+}
+
+.footer p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer a {
+    color: #198754;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN (उत्तरदायी लेआउट)
+   ============================================ */
+/* ============================================
+   RESPONSIVE DESIGN (औंलाले स्क्रोल गर्ने स्टाइल)
+   ============================================ */
+@media (max-width: 968px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+}
+
+/* मोबाइल स्क्रिन (६४० पिक्सेल वा सोभन्दा सानो) को लागि */
+@media (max-width: 640px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
+    
+    .nav-links {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px 0;
+        
+        /* स्क्रोललाई एकदम स्मूथ र सजिलो बनाउने */
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch; /* iPhone मा स्मूथ स्क्रोलको लागि */
+        scroll-snap-type: x mandatory;
+        
+        /* मेनुको सुरु र अन्त्यमा अलिकति खाली ठाउँ छोड्ने */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .nav-links li {
+        scroll-snap-align: start;
+    }
+
+    /* मोबाइलमा पनि स्क्रोलबार सानो र प्रष्ट देखिने बनाउने */
+    .nav-links::-webkit-scrollbar {
+        height: 5px; /* स्क्रोलबारको मोटाई */
+        display: block; /* मोबाइलमा पनि देखाउने */
+    }
+    
+    .nav-links::-webkit-scrollbar-track {
+        background: #f1f0ea;
+        border-radius: 10px;
+    }
+    
+    .nav-links::-webkit-scrollbar-thumb {
+        background: #198754; /* हाम्रो हरियो थिमको स्क्रोलबार */
+        border-radius: 10px;
+    }
+    
+    .auth-buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+}
+
+/* ============================================
+   SIGNUP MODAL (POP-UP BOX) STYLING
+   ============================================ */
+.modal {
+    display: none; /* सुरुमा यो लुकेर बस्छ */
+    position: fixed;
+    z-index: 2000; /* सबैभन्दा माथि देखाउन */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* ब्याकग्राउन्ड हल्का धमिलो बनाउन */
+    backdrop-filter: blur(4px); /* प्रिमियम धमिलो लुक */
+    justify-content: center;
+    align-items: center;
+}
+
+/* मोडेल बक्स खुल्दा यो क्लास थपिन्छ */
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fdfcfb; /* Soft Warm White */
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* बन्द गर्ने (X) बटन */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #0f5132; /* हाम्रो गाढा हरियो रङ */
+}
+
+.modal-content h2 {
+    color: #0f5132;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* फारमको स्टाइल */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #dcd9cf;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #198754; /* फोकस हुँदा हरियो हुने */
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.1);
+}
+
+/* फारम भित्रको Sign Up बटन */
+.form-submit-btn {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.form-submit-btn:hover {
+    background-color: #0f5132;
+}
+/* First Name र Last Name लाई एउटै लाइनमा मिलाउन */
+.form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1; /* दुवै इनपुट बक्सले बराबर ठाउँ लिन्छन् */
+}
+
+/* जन्ममितिको क्यालेन्डर बक्सलाई सफा देखाउन */
+input[type="date"] {
+    font-family: inherit;
+    color: #4a5568;
+}
+/* मोबाइलमा फर्स्ट नेम र लास्ट नेम तल-माथि बस्ने फिक्स */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

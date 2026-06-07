@@ -1,0 +1,260 @@
+/* ============================================
+   WEALTHOS - PERSONAL FINANCE STYLES (finance.css)
+   ============================================ */
+
+/* मुख्य फाइनान्स सेक्सनको सेतो ब्याकग्राउन्ड बक्स */
+.fin-section {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 28px 16px;
+    background: #fff;
+    border: 1px solid #f3f1eb;
+    border-radius: 12px;
+}
+
+/* सेक्सनको हेडिङ र देव्रेपट्टिको हरियो धर्को */
+.fin-heading-box {
+    border-left: 4px solid #198754;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.fin-title {
+    color: #0f5132;
+    font-size: 28px;
+    margin: 0 0 5px 0;
+}
+
+.fin-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* माथिको मुख्य टोटल नेटवर्थ देखिने ब्यानर कार्ड */
+.fin-networth-card {
+    background: linear-gradient(135deg, #198754, #0f5132);
+    color: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.12);
+}
+
+.fin-networth-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.95;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.fin-networth-card h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* मुख्य ग्रिड लेआउट: ल्यापटपमा फारम देव्रेतिर र टेबल दाहिनेतिर हुन्छ */
+.fin-container-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* मोबाइल स्क्रिनको लागि: तल-माथि बस्ने बनाइएको */
+@media (max-width: 992px) {
+    .fin-container-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* देव्रेपट्टिको एसेट थप्ने फारम कार्ड */
+.fin-control-card {
+    background: #fdfcfb;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #f1f0ea;
+}
+
+.fin-control-card h3 {
+    color: #1e293b;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f0ea;
+    padding-bottom: 10px;
+}
+
+.fin-form-group {
+    margin-bottom: 15px;
+}
+
+.fin-form-group label {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.fin-form-group select, .fin-form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* एसेट सेभ गर्ने हरियो बटन */
+.fin-primary-btn {
+    width: 100%;
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.fin-primary-btn:hover {
+    background-color: #146c43;
+}
+
+/* दाहिनेपट्टिको नेटवर्थ टेबल बक्स */
+.fin-table-card {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+/* तपाईंको स्क्रिनसट जस्तै आकर्षक डार्क हेडर बक्स */
+.fin-table-header-row {
+    background: #1e293b; 
+    color: white;
+    padding: 15px 20px;
+}
+
+.fin-table-header-row h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.fin-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* मुख्य टेबल स्टाइल */
+.fin-tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 13px;
+}
+
+.fin-tracker-table th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.fin-tracker-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* अन्तिमको "Total Values" देखिने विशेष रो (Row) */
+.fin-row-total {
+    background-color: #f1f5f9 !important;
+}
+
+.fin-row-total td {
+    color: #0f5132 !important;
+    font-weight: 700 !important;
+}
+
+/* Summary table style */
+.summary-table-card {
+    margin-top: 20px;
+}
+
+.summary-table th {
+    font-size: 13px;
+    color: #475569;
+    background: #f8fafc;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-table td {
+    font-size: 14px;
+    color: #0f5132;
+    padding: 12px 14px;
+}
+
+@media (max-width: 768px) {
+    .summary-table th,
+    .summary-table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .summary-metric-row {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+    .summary-metric-row:first-child {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .summary-metric-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* नाफा बुझाउने हरियो रङ */
+.text-profit {
+    color: #198754;
+    font-weight: 600;
+}
+
+/* घाटा बुझाउने रातो रङ */
+.text-loss {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* हटाउने (Remove) फोहोरदानी आइकन बटन */
+.fin-btn-delete {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.fin-btn-delete:hover {
+    background: #fde8e8;
+}

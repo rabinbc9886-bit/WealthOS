@@ -1,0 +1,125 @@
+/* ============================================
+   WEALTHOS - ME SECTION & AVATAR STYLES (me.css)
+   ============================================ */
+
+/* १. मुख्य प्रोफाइल सेक्सन कन्टेनर */
+.me-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background: #fff;
+    border: 1px solid #f3f1eb;
+    border-radius: 12px;
+}
+
+/* २. सेक्सनको हेडिङ र देव्रेपट्टिको हरियो धर्को */
+.profile-heading-box {
+    border-left: 4px solid #198754;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.profile-title {
+    color: #0f5132;
+    font-size: 28px;
+    margin: 0 0 5px 0;
+}
+
+.profile-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ३. प्रोफाइलको मुख्य ग्रिड लेआउट */
+.me-profile-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ४. देव्रेपट्टिको एभाटार बक्स कन्टेनर */
+.avatar-left-container {
+    text-align: center;
+}
+
+/* ५. प्रोफाइलको गोलो एभाटार बक्स (Circle) */
+.profile-avatar-box {
+    width: 100px;
+    height: 100px;
+    background-color: #198754;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ६. फोटो चेन्ज गर्ने लिङ्क बटन */
+.change-photo-link-btn {
+    background: none;
+    border: none;
+    color: #198754;
+    font-size: 13px;
+    cursor: pointer;
+    display: block;
+    margin: -10px auto 10px auto;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.change-photo-link-btn:hover {
+    color: #146c43;
+    text-decoration: underline;
+}
+
+/* ७. एक्टिभ मेम्बर ब्याज */
+.active-member-badge {
+    background-color: #e8f5e9;
+    color: #0f5132;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ८. दायाँपट्टिको युजर डाटा फारम ग्रिड */
+.profile-info-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: #fdfcfb;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #f1f0ea;
+}
+
+/* ९. फारम भित्रको लेबल र डेटा */
+.profile-label {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.profile-data-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* १०. फारम बीचको तेर्सो धर्को (Separator) */
+.profile-form-separator {
+    grid-column: span 2;
+    height: 1px;
+    background: #f1f0ea;
+    margin: 5px 0;
+}

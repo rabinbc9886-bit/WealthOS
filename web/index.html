@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WealthOS - Financial Operating System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">WealthOS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#notice">Notice</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="document.html">Documents</a></li>
+                <li><a href="#finance">Personal Finance</a></li>
+                <li><a href="#me">Me</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Financial Operating System</h1>
+            <p>Track your income, monitor expenses, and automate your savings with the ultimate clean financial operating system.</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <!-- ड्यासबोर्ड स्क्रिनसटको लागि प्लेसहोल्डर बक्स -->
+            <div class="dashboard-mockup">
+                <span class="mockup-text">Dashboard Screenshot Here</span>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 WealthOS. All rights reserved.</p>
+        <p>Contact: <a href="mailto:info@wealthos.com">info@wealthos.com</a></p>
+    </footer>
+
+    <!-- १. SIGN UP (CREATE ACCOUNT) MODAL -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Create New Account</h2>
+            <p>Join WealthOS today and manage your finance.</p>
+            
+            <form id="signupForm" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" min="1950-01-01" max="2016-12-31" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="form-submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- २. LOGIN MODAL (नयाँ थपिएको) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Welcome Back</h2>
+            <p>Login to your WealthOS operating system.</p>
+            
+            <form id="loginForm" class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    
+                    <a href="#" onclick="closeModal('loginModal'); openModal('forgotModal');" style="display: block; font-size: 13px; color: #198754; text-align: right; margin-top: 8px; text-decoration: none; font-weight: 600;">Forgot Password?</a>
+                </div>
+                
+ 
+                <button type="submit" class="form-submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- ३. FORGOT PASSWORD MODAL (नयाँ थपिएको) -->
+    <div id="forgotModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('forgotModal')">&times;</span>
+            <h2>Reset Password</h2>
+            <p>आफ्नो अकाउन्ट सुरक्षित गर्न ईमेल र जन्ममिति प्रमाणित गर्नुहोस्।</p>
+            
+            <form id="forgotForm" class="modal-form">
+                <div class="form-group">
+                    <label for="forgotEmail">Email Address</label>
+                    <input type="email" id="forgotEmail" placeholder="Enter your registered email" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgotDOB">Date of Birth</label>
+                    <input type="date" id="forgotDOB" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" placeholder="Create a new password" required>
+                </div>
+                <button type="submit" class="form-submit-btn">Reset Password</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

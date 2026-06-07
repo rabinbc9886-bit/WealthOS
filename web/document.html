@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WealthOS - Documents</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="documents.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">WealthOS</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html#notice">Notice</a></li>
+                <li><a href="home.html#tools">Tools</a></li>
+                <li><a href="document.html">Documents</a></li>
+                <li><a href="home.html#finance">Personal Finance</a></li>
+            </ul>
+            <div class="navbar-profile">
+                <div id="navbarAvatar" class="navbar-avatar-box">
+                    <span id="navbarAvatarInitial"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="document-page">
+        <div class="document-header">
+            <div>
+                <h1>Documents</h1>
+                <p>Upload and store your document photos securely in WealthOS.</p>
+            </div>
+            <a href="home.html" class="back-link">← Back to Dashboard</a>
+        </div>
+
+        <div class="document-card">
+            <div class="document-card-content">
+                <h2>Upload Document Photos</h2>
+                <p>Select image files of your documents to save them safely for later reference.</p>
+                <div class="upload-controls">
+                    <input id="documentName" type="text" placeholder="Document Name (e.g. Passport, Rent Bill)">
+                    <select id="documentCategory">
+                        <option value="Passport">Passport</option>
+                        <option value="ID Card">ID Card</option>
+                        <option value="Bill">Bill</option>
+                        <option value="Certificate">Certificate</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <label for="documentFiles" class="upload-button">Choose Images</label>
+                    <input id="documentFiles" type="file" accept="image/*" multiple>
+                    <button id="clearDocumentsBtn" class="secondary-btn">Clear All</button>
+                </div>
+                <div class="document-help-text">You can upload passports, IDs, bills, or any document photo. Files are stored in browser storage per user.</div>
+            </div>
+        </div>
+
+        <section class="document-list-section">
+            <div class="document-list-header">
+                <h2>Saved Documents</h2>
+                <span id="documentCount">0 documents</span>
+            </div>
+            <div id="documentsList" class="document-list"></div>
+            <div id="emptyState" class="document-empty-state">No documents uploaded yet. Choose images to start.</div>
+        </section>
+    </main>
+
+    <script src="document.js"></script>
+</body>
+</html>
