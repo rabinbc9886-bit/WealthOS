@@ -2,28 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WealthOS - Financial Operating System</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WealthOS | Financial Operating System</title>
+
+    <meta name="description"
+    content="WealthOS is a personal financial operating system to manage income, expenses, investments, documents, and long-term wealth.">
+
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="icon"type="image/png" href="wealthOSlogo.png">
+
+    <link rel="apple-touch-icon" href="wealthOSlogo.png">
+
     <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
    <nav class="navbar">
     <div class="nav-container">
         <div class="logo">
             <a href="home.html">
-                <img src="wealthOSlogo.png" alt="WealthOS" style="height: 80px; vertical-align: middle;">
+                <img src="wealthOSlogo.png" alt="WealthOS Logo" class="logo-img">
             </a>
         </div>
-        
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#notice">Notice</a></li>
-            <li><a href="#tools">Tools</a></li>
+       
+        <!--<ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="notice.html">Notice</a></li>
+            <li><a href="tools.html">Tools</a></li>
             <li><a href="document.html">Documents</a></li>
-            <li><a href="#finance">Personal Finance</a></li>
-            <li><a href="#me">Me</a></li>
-        </ul>
+            <li><a href="finance.html">Personal Finance</a></li>
+            <li><a href="me.html">Me</a></li>
+        </ul> -->
+        
         <div class="auth-buttons">
             <button class="login-btn">Login</button>
             <button class="signup-btn">Sign Up</button>
@@ -34,14 +47,42 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <span class="hero-badge">Personal Finance • Investment • Documents</span>
+
             <h1>Your Financial Operating System</h1>
-            <p>Track your income, monitor expenses, and automate your savings with the ultimate clean financial operating system.</p>
-            <button class="cta-button">Get Started</button>
-        </div>
-        <div class="hero-image">
-            <!-- ड्यासबोर्ड स्क्रिनसटको लागि प्लेसहोल्डर बक्स -->
-            <div class="dashboard-mockup">
-                <span class="mockup-text">Dashboard Screenshot Here</span>
+
+            <p>
+                 Manage your income, expenses, investments, insurance,
+            documents and financial goals from one secure platform. 
+            </p>
+           
+
+            <div class="hero-buttons">
+                <button class="cta-button" id="getStartedBtn">
+                    Get Started
+                </button>
+
+            </div>
+            <div class="hero-stats">
+            <div class="stat">
+                <h4>100%</h4>
+                <span>Private</span>
+            </div>
+
+            <div class="stat">
+                <h4>Multi</h4>
+                <span>Platform</span>
+            </div>
+
+            <div class="stat">
+                <h4>PWA</h4>
+                <span>Installable</span>
+            </div>
+            <div class="stat learn-more">
+                <a href="#features" class="learn-more-link">
+                     Learn More →
+                </a>
+            
             </div>
         </div>
     </section>
