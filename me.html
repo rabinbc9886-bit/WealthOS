@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WealthOS | Financial Operating System</title>
+
+    <meta name="description"
+    content="WealthOS is a personal financial operating system to manage income, expenses, investments, documents, and long-term wealth.">
+
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="icon"type="image/png" href="wealthOSlogo.png">
+
+    <link rel="apple-touch-icon" href="wealthOSlogo.png">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="wealthOSlogo.png" alt="WealthOS" style="height: 80px; vertical-align: middle;">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="document.html">Documents</a></li>
+                <li><a href="finance.html">Personal Finance</a></li>
+            </ul>
+            <div class="navbar-profile">
+                <div id="navbarAvatar" class="navbar-avatar-box">
+                    <span id="navbarAvatarInitial"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="meSection" class="me-section" style="display: none;">
+        
+        <div class="profile-heading-box">
+            <h2 class="profile-title">My Profile</h2>
+            <p class="profile-subtitle">Your personal details recorded in WealthOS.</p>
+        </div>
+
+        <div class="me-profile-grid">
+            
+            <div class="avatar-left-container">
+                <div id="meAvatar" class="profile-avatar-box">
+                    <span id="avatarInitial"></span>
+                </div>
+                
+                <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                <button type="button" class="change-photo-link-btn" onclick="document.getElementById('avatarUpload').click()">Change Photo</button>
+
+                <span class="active-member-badge">Active Member</span>
+                
+                <button id="logoutBtn" class="login-btn" style="border-color: #dc3545; color: #dc3545; width: 100%; margin-top: 20px;">Logout</button>
+            </div>
+
+            <div class="profile-info-card">
+                <div>
+                    <label class="profile-label">First Name</label>
+                    <div id="meFirstName" class="profile-data-text">-</div>
+                </div>
+                <div>
+                    <label class="profile-label">Last Name</label>
+                    <div id="meLastName" class="profile-data-text">-</div>
+                </div>
+                
+                <div class="profile-form-separator"></div>
+                
+                <div>
+                    <label class="profile-label">Email Address</label>
+                    <div id="meEmail" class="profile-data-text">-</div>
+                </div>
+                <div>
+                    <label class="profile-label">Date of Birth</label>
+                    <div id="meDOB" class="profile-data-text">-</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2024 WealthOS. All rights reserved.</p>
+        <p>Contact: <a href="mailto:info@wealthos.com">info@wealthos.com</a></p>
+    </footer>
+
+     <script src="auth.js"></script>
+     <script src="navbar.js"></script>
+     <script src="me.js"></script>
+</body>
+</html>
